@@ -75,64 +75,66 @@ public class numberGuess extends Activity implements OnClickListener {
     				try{
     					guess = Integer.parseInt(numText.getText().toString());
     					if(guess == randNum){
-    						toast.setText("Correct. New number picked.");
-    						numText.setHint("Guess a number between 1 and 100");
+    						toast.setText(this.getString(R.string.correct));
+    						numText.setHint(this.getString(R.string.hint));
     						randNum = (int)((Math.random() * 100) + 1);
     						count = 5;
     					} else if(guess > randNum ){
     						count--;
-    						toast.setText("Too high, " + count + " tries left.");
-    						numText.setHint("My number is lower than " + guess);
+    						toast.setText(this.getString(R.string.high) + count + " " + this.getString(R.string.triesLeft));
+    						numText.setHint(this.getString(R.string.lowerHint) + " " + guess);
     					} else if(guess < randNum){
     						count--;
-    						toast.setText("Too low, " + count + " tries left.");
-    						numText.setHint("My number is higher than " + guess);
+    						toast.setText(this.getString(R.string.low) + count + " " + this.getString(R.string.triesLeft));
+    						numText.setHint(this.getString(R.string.higherHint) + " " + guess);
     					}
     		
     					if(count == 0){
     						toast.setDuration(Toast.LENGTH_LONG);
-    						toast.setText("The number was " + randNum + ". New number picked.");
+    						toast.setText(this.getString(R.string.answer) + " " + randNum + "." + this.getString(R.string.newNum));
     						randNum = (int)((Math.random() * 100) + 1);
     						count = 5;
-    						numText.setHint("Guess a number between 1 and 100");
+    						numText.setHint(this.getString(R.string.hint));
     					}
     				} catch (Exception e) {
-    					toast.setText("Try putting in a number.");
+    					toast.setText(this.getString(R.string.error));
     					toast.setDuration(Toast.LENGTH_LONG);
     				}
     				toast.show();
+    				
+    				/* Clear guess */
     				numText.setText("");
     			}
     			break;
     		case R.id.one:
-    			numText.append("1");
+    			numText.append(this.getString(R.string.one));
     			break;
     		case R.id.two:
-    			numText.append("2");
+    			numText.append(this.getString(R.string.two));
     			break;
     		case R.id.three:
-    			numText.append("3");
+    			numText.append(this.getString(R.string.three));
     			break;
     		case R.id.four:
-    			numText.append("4");
+    			numText.append(this.getString(R.string.four));
     			break;
     		case R.id.five:
-    			numText.append("5");
+    			numText.append(this.getString(R.string.five));
     			break;
     		case R.id.six:
-    			numText.append("6");
+    			numText.append(this.getString(R.string.six));
     			break;
     		case R.id.seven:
-    			numText.append("7");
+    			numText.append(this.getString(R.string.seven));
     			break;
     		case R.id.eight:
-    			numText.append("8");
+    			numText.append(this.getString(R.string.eight));
     			break;
     		case R.id.nine:
-    			numText.append("9");
+    			numText.append(this.getString(R.string.nine));
     			break;
     		case R.id.zero:
-    			numText.append("0");
+    			numText.append(this.getString(R.string.zero));
     			break;
     		case R.id.clr:
     			numText.setText("");

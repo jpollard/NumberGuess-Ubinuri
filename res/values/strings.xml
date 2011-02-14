@@ -2,6 +2,7 @@
 <resources>
     <string name="hello">I\'m thinking of a number...</string>
     <string name="app_name">Number Guess</string>
+    
     <string name="button">Guess</string>
     <string name="one">1</string>
     <string name="two">2</string>
@@ -13,5 +14,17 @@
     <string name="eight">8</string>
     <string name="nine">9</string>
     <string name="zero">0</string>
-    <string name="clr">clr</string>
+    <string name="clr">clear</string>
+    
+    <string name="correct">Correct. New number picked.</string>
+    <string name="hint">Guess a number between 1 and 100.</string>
+    <string name="high">Too high, </string>
+    <string name="low">Too low, </string>
+    <string name="triesLeft">tries left.</string>
+    <string name="lowerHint">My number is lower than</string>
+    <string name="higherHint">My number is higher than</string>
+    <string name="answer">The number was</string>
+    <string name="newNum">New number picked.</string>
+    <string name="error">Try putting in a number.</string>
+    
 </resources>
