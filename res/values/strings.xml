@@ -18,9 +18,12 @@
     
     <string name="correct">Correct. New number picked.</string>
     <string name="hint">Guess a number between 1 and 100.</string>
+    
+    <!-- high and low get combined with triesLeft after a guess -->
     <string name="high">Too high, </string>
     <string name="low">Too low, </string>
     <string name="triesLeft">tries left.</string>
+    
     <string name="lowerHint">My number is lower than</string>
     <string name="higherHint">My number is higher than</string>
     <string name="answer">The number was</string>
